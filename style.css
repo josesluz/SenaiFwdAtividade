@@ -22,6 +22,12 @@ body {
     line-height: 26px;
 }
 
+bannerPrincipal {
+    border-bottom: 1px #606060 solid;
+    ;
+	width: 100%;
+    height: 500px;
+}
 
 h2,
 h4 {
@@ -81,4 +87,29 @@ z-index: 999;
 
 .altura-100 {
 	height: 100vh;
+}
+
+#meet-team .team-member:hover .social-icons>li>a {
+    background: #45aed6;
+}
+
+#meet-team .social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#meet-team .social-icons>li {
+    display: inline-block;
+}
+
+#meet-team .social-icons>li>a {
+    display: block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    color: #fff;
+    background: #222534;
+    border-radius: 3px;
 }
