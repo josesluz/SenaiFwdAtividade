@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Soluções em Tecnologia">
+    <meta name="author" content="José Santos da Luz">
+    <title>José Luz | Soluções em Tecnologia</title>
+    <!-- CSS BOOTSTRAP, ICONES RODAPÉ   -->
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+<body id="home" class="homepage">
+
+   <!-- HEADER | MENU DE NAVEGAÇÃO -->
+    <header id="header">
+        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner" style="background-color: white">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="./index.html"><strong><span style="color: #33a7d8; font-size: 34p">José Luz</span></strong>
+                </div>
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="scroll active"><a href="./index.html#home">Home</a></li>
+                        <li class="scroll"><a href="./index.html#servicos">Serviços</a></li>
+                        <li class="scroll"><a href="./index.html#sobre">Sobre</a></li>
+                        <li class="scroll"><a href="./index.html#contato">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div>
+      <h2><center>Área restrita</center></h2>
+      <div class="tela-total">
+        <img src="https://pureeventgear.co.za/web/wp-content/uploads/2013/08/Under-Construction.jpg" width="100%">
+      </div>
+    </div>
+    </footer>
+    <div class="whatsapp-fixo">
+      <a href="https://api.whatsapp.com/send?phone=5571997363016&text=Olá,%20José!">
+        <img src="images/whatsapp.png" width="64px" height="64px" alt="Fale pelo WhatsApp"/>
+      </a>
+    </div>
+</body>
+</html>
+
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+
+function checagem(id) {
+	if(id=="p1oA") {
+	document.getElementById("p1oA").checked=true;
+	document.getElementById("p1oB").checked=false;
+	document.getElementById("p1oC").checked=false;
+
+	} if(id=="p1oB") {
+	document.getElementById("p1oA").checked=false;
+	document.getElementById("p1oB").checked=true;
+	document.getElementById("p1oC").checked=false;
+	}
+}
+
+function Login(){
+	var status=0;
+	var username = document.getElementById("login").value;
+	var password = document.getElementById("senha").value;
+	if (username=="usuario" && password=="usuario") {
+		window.location="arearestrita.html";
+		status=1;
+	}
+	if (status==0) {
+		alert("Senha ou Usuário inválido.");
+	}
+}
+
+</SCRIPT>

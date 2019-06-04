@@ -2,32 +2,23 @@
 <html lang="pt-br">
 
 <head>
-	<meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″>  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Soluções em Tecnologia">
     <meta name="author" content="José Santos da Luz">
     <title>José Luz | Soluções em Tecnologia</title>
     <!-- CSS BOOTSTRAP, ICONES RODAPÉ   -->
     <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link href="http://josesluz.com.br/multi/css/main.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link rel="stylesheet" href="https://github.com/MrSaints/Morphext/blob/master/dist/morphext.css">
-    <!-- <script src="https://github.com/MrSaints/Morphext/blob/master/dist/morphext.min.js"></script>   -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body id="home" class="homepage">
 
-   <!-- HEADER | MEN DE NAVEGAÇÃO -->
+   <!-- HEADER | MENU DE NAVEGAÇÃO -->
     <header id="header">
         <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner" style="background-color: white">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
                     <a class="navbar-brand" href="index.html"><strong><span style="color: #33a7d8; font-size: 34p">José Luz</span></strong>
                 </div>
                 <div class="collapse navbar-collapse navbar-right">
@@ -41,12 +32,28 @@
             </div>
         </nav>
     </header>
+		<div class="col-sm-12 navbar">
+						<div class="col-sm-2">
+							 <form class="form-signin">
+								 <div class="form-label-group">
+									 <input type="text" id="login" class="form-control" style="width:200px" placeholder="Login" required>
+								 </div>
+						</div>
+						<div class="col-sm-2">
 
+								 <div class="form-label-group">
+									 <input type="password" id="senha" class="form-control" style="width:200px" placeholder="Senha" required>
+								 </div>
+					 </div>
+					 <div class="col-sm-2">
+								 <button onclick="Login()" class="btn btn-primary">Login</button>
+					</div>
+							 </form>
+						 </div>
     <!--BANNER PRINCIPAL -->
      <section id="banner">
         <div class="tela-total">
-            <img src="http://www.qutxo.com/wp-content/uploads/2018/02/humss-tech-support-banner.jpg" width="100%"> 
-            <!-- <h1 class="animated infinite bounce delay-2s">Examplo</h1>-->
+            <img src="http://www.qutxo.com/wp-content/uploads/2018/02/humss-tech-support-banner.jpg" width="100%">
         </div>
     </section>
 
@@ -106,52 +113,51 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div>
-                        <img src="http://josesluz.com.br/multi/images/profile" class="borda-imagem">
+                        <img src="images/perfil.png" class="borda-imagem">
                     </div>
                 </div>
 
                 <div class="col-sm-13">
                     <br>
-                    <p>Olá, sou José Luz, 29 anos, residente em Salvador-BA, estudante de Gestão da Tecnologia da Inforomação e Desenvolvimento de Sistemas. Para conhecer mais sobre meu histórico acadêmico e profissional, clique aqui.
+                    <p>Olá, sou José Luz, 29 anos, residente em Salvador-BA, formado em Processos Gerenciais, atualmente sou estudante dos cursos de Gestão em Tecnologia da Informação e Desenvolvimento de Sistemas.
                      </p>
                 </div>
 
             </div>
         </div>
     </section>
-        <!-- CONTATO -->
-        <section id="contato">
+    <!-- CONTATO -->
+    <section id="contato">
         <div class="container tela-total">
             <div class="header">
-                <h2 class="titulo">Contato</h2>
-            </div>
-            <form>
+            <h2 class="titulo">Contato</h2>
+						<center><p id="alertaContato"></p></center>
+        </div>
               <div class="row">
                 <div class="form-group col-md-4 col-sm-6">
                   <label>Nome: </label>
-                  <input class="form-control" placeholder="Nome"></input>
+                  <input id="nome" value="" class="form-control" placeholder="Nome"></input>
                 </div>
                 <div class="form-group col-md-4 col-sm-6">
                   <label>Telefone: </label>
-                  <input class="form-control" placeholder="(XX) 00000-0000"></input>
+                  <input  id="telefone" value="" class="form-control" placeholder="(XX) 00000-0000" onkeypress='return event.charCode >= 48 && event.charCode <= 57'></input>
                 </div>
                 <div class="form-group col-md-4 col-sm-6">
                   <label>E-mail</label>
-                  <input type="email" class="form-control"placeholder="E-mail" required oninvalid="this.setCustomValidity('C
-                  ampo requerido')" onchange="try{setCustomValidity('')}catch(e){}"> <!-- Mensagem personalizada para campo obrigatório -->
+                  <input  id="email" value="" type="email" class="form-control"placeholder="E-mail"> <!-- Mensagem personalizada para campo obrigatório -->
                 </div>
                 <div class="form-group col-sm-12">
                   <label>Mensagem: </label>
-                  <textarea class="form-control" rows="10" cols="10" placeholder="Sua mensagem"></textarea>
+                  <textarea id="mensagem" value="" class="form-control" rows="10" cols="10" placeholder="Sua mensagem"></textarea>
                 </div>
                 <div class="col-sm-12 topicos">
-                <button class="btn btn-primary" type="submit">Enviar mensagem</button>
+                <button onclick="validarFormulario()" class="btn btn-primary">Enviar mensagem</button>
                 <button class="btn btn-primary" type="reset">Limpar formulário</button>
               </div>
               </div>
-            </form>
-          </div>
-          </section>
+        </div>
+    </section>
+
 
     <!--RODAPÉ -->
     <footer id="footer">
@@ -173,8 +179,9 @@
     </footer>
     <div class="whatsapp-fixo">
       <a href="https://api.whatsapp.com/send?phone=5571997363016&text=Olá,%20José!">
-        <img src="http://josesluz.com.br/multi/images/whatsapp.png" width="64px" height="64px" alt="Fale pelo WhatsApp"/>
+        <img src="images/whatsapp.png" width="64px" height="64px" alt="Fale pelo WhatsApp"/>
       </a>
     </div>
+		<script type="text/javascript" src="parametros.js"></script>
 </body>
 </html>
